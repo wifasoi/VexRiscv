@@ -120,7 +120,7 @@ jobs:
             branch: master  # You can't be safe enough <insert double condom joke here>
 
 stages:
-  - test-vexriscv
-  - test-links
+  #- test-vexriscv
+  #- test-links
   - name: deploy
     if: branch = master  # Deploy only on master commits
