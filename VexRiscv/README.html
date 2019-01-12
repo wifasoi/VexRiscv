@@ -1,0 +1,1562 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Index &mdash; VexRiscv  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to VexRiscv’s documentation!" href="../index.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> VexRiscv
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id2">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id3">Area usage and maximal frequency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id4">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id5">CPU generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id6">Regression tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id7">Interactive debug of the simulated CPU via GDB OpenOCD and Verilator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id8">Using Eclipse to run the software and debug it</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id9">By using Zylin plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">By using FreedomStudio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id11">Briey SoC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id12">Murax SoC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id13">Build the RISC-V GCC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id14">CPU parametrization and instantiation example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id15">Add a custom instruction to the CPU via the plugin system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id16">Adding a new CSR via the plugin system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id17">CPU clock and resets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id18">VexRiscv Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id19">Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id20">IBusSimplePlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">IBusCachedPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">DecoderSimplePlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">RegFilePlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">HazardSimplePlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">SrcPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">IntAluPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">LightShifterPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">FullBarrelShifterPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">BranchPlugin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#prediction-none">Prediction NONE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prediction-static">Prediction STATIC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prediction-dynamic">Prediction DYNAMIC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prediction-dynamic-target">Prediction DYNAMIC_TARGET</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">DBusSimplePlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">DBusCachedPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">MulPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">DivPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">MulDivIterativePlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">CsrPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">StaticMemoryTranslatorPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">MemoryTranslatorPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38">DebugPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id39">YamlPlugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VexRiscv</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Index</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/VexRiscv/README.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="index">
+<h1>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="#index">Index</a></li>
+<li><a class="reference external" href="#description">Description</a></li>
+<li><a class="reference external" href="#area-usage-and-maximal-frequency">Area usage and maximal frequency</a></li>
+<li><a class="reference external" href="#dependencies">Dependencies</a></li>
+<li><a class="reference external" href="#cpu-generation">CPU generation</a></li>
+<li><a class="reference external" href="#regression-tests">Regression tests</a></li>
+<li><a class="reference external" href="#interactive-debug-of-the-simulated-cpu-via-gdb-openocd-and-verilator">Interactive debug of the simulated CPU via GDB OpenOCD and Verilator</a></li>
+<li><a class="reference external" href="#using-Eclipse-to-run-the-software-and-debug-it">Using Eclipse to run the software and debug it</a><ul>
+<li><a class="reference external" href="#by-using-zylin-plugin">By using Zylin plugin</a></li>
+<li><a class="reference external" href="#by-using-freedomstudio">By using FreedomStudio</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#briey-soc">Briey SoC</a></li>
+<li><a class="reference external" href="#murax-soc">Murax SoC</a></li>
+<li><a class="reference external" href="#build-the-risc-v-gcc">Build the RISC-V GCC</a></li>
+<li><a class="reference external" href="#cpu-parametrization-and-instantiation-example">CPU parametrization and instantiation example</a></li>
+<li><a class="reference external" href="#add-a-custom-instruction-to-the-cpu-via-the-plugin-system">Add a custom instruction to the CPU via the plugin system</a></li>
+<li><a class="reference external" href="#adding-a-new-csr-via-the-plugin-system">Adding a new CSR via the plugin system</a></li>
+<li><a class="reference external" href="#cpu-clock-and-resets">CPU clock and resets</a></li>
+<li><a class="reference external" href="#vexriscv-architecture">VexRiscv Architecture</a><ul>
+<li><a class="reference external" href="#plugins">Plugins</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h1>Description<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>This repository hosts a RISC-V implementation written in SpinalHDL. Here are some specs :</p>
+<ul class="simple">
+<li>RV32I[M][C] instruction set</li>
+<li>Pipelined with 5 stages (Fetch, Decode, Execute, Memory, WriteBack)</li>
+<li>1.44 DMIPS/Mhz –no-inline when nearly all features are enabled (1.57 DMIPS/Mhz when the divider lookup table is enabled)</li>
+<li>Optimized for FPGA, fully portable</li>
+<li>AXI4 and Avalon ready</li>
+<li>Optional MUL/DIV extensions</li>
+<li>Optional instruction and data caches</li>
+<li>Optional MMU</li>
+<li>Optional debug extension allowing Eclipse debugging via a GDB &gt;&gt; openOCD &gt;&gt; JTAG connection</li>
+<li>Optional interrupts and exception handling with Machine and User modes as defined in the <a class="reference external" href="https://riscv.org/specifications/privileged-isa/">RISC-V Privileged ISA Specification v1.9</a>.</li>
+<li>Two implementations of shift instructions: Single cycle and shiftNumber cycles</li>
+<li>Each stage can have optional bypass or interlock hazard logic</li>
+<li>Zephyr RISC-V port compatible</li>
+<li><a class="reference external" href="https://github.com/Dolu1990/FreeRTOS-RISCV">FreeRTOS port</a></li>
+<li>The data cache supports atomic LR/SC</li>
+<li>Optional RV32 compressed instruction support in the reworkFetch branch for configurations without instruction cache (will be merge in master, WIP)</li>
+</ul>
+<p>The hardware description of this CPU is done by using a very software oriented approach
+(without any overhead in the generated hardware). Here is a list of software concepts used:</p>
+<ul class="simple">
+<li>There are very few fixed things. Nearly everything is plugin based. The PC manager is a plugin, the register file is a plugin, the hazard controller is a plugin, …</li>
+<li>There is an automatic a tool which allows plugins to insert data in the pipeline at a given stage, and allows other plugins to read it in another stage through automatic pipelining.</li>
+<li>There is a service system which provides a very dynamic framework. For instance, a plugin could provide an exception service which can then be used by other plugins to emit exceptions from the pipeline.</li>
+</ul>
+<p>There is a gitter channel for all questions about VexRiscv :<span class="raw-html-m2r"><br></span></p>
+<a class="reference external image-reference" href="https://gitter.im/SpinalHDL/VexRiscv?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge"><img alt="Gitter" src="https://badges.gitter.im/SpinalHDL/VexRiscv.svg" /></a>
+<p>For commercial support, please contact <a class="reference external" href="mailto:spinalhdl&#37;&#52;&#48;gmail&#46;com">spinalhdl<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
+</div>
+<div class="section" id="id3">
+<h1>Area usage and maximal frequency<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<p>The following numbers were obtained by synthesizing the CPU as toplevel without any specific synthesis options to save area or to get better maximal frequency (neutral).<span class="raw-html-m2r"><br></span>
+The clock constraint is set to an unattainable value, which tends to increase the design area.<span class="raw-html-m2r"><br></span>
+The dhrystone benchmark was compiled with the <code class="docutils literal notranslate"><span class="pre">-O3</span> <span class="pre">-fno-inline</span></code> option.<span class="raw-html-m2r"><br></span>
+All the cached configurations have some cache trashing during the dhrystone benchmark except the <code class="docutils literal notranslate"><span class="pre">VexRiscv</span> <span class="pre">full</span> <span class="pre">max</span> <span class="pre">perf</span></code> one. This of course reduces the performance. It is possible to produce
+dhrystone binaries which fit inside a 4KB I$ and 4KB D$ (I already had this case once) but currently it isn’t the case.<span class="raw-html-m2r"><br></span>
+The CPU configurations used below can be found in the <code class="docutils literal notranslate"><span class="pre">src/scala/vexriscv/demo</span></code> directory.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>VexRiscv smallest (RV32I, 0.52 DMIPS/Mhz, no datapath bypass, no interrupt) -&gt;
+  Artix 7    -&gt; 346 Mhz 481 LUT 539 FF
+  Cyclone V  -&gt; 201 Mhz 347 ALMs
+  Cyclone IV -&gt; 190 Mhz 673 LUT 529 FF
+  iCE40      -&gt; 81 Mhz 1130 LC
+
+VexRiscv smallest (RV32I, 0.52 DMIPS/Mhz, no datapath bypass) -&gt;
+  Artix 7    -&gt; 340 Mhz 562 LUT 589 FF
+  Cyclone V  -&gt; 202 Mhz 387 ALMs
+  Cyclone IV -&gt; 180 Mhz 780 LUT 579 FF
+  iCE40      -&gt; 71 Mhz 1278 LC
+
+VexRiscv small and productive (RV32I, 0.82 DMIPS/Mhz)  -&gt;
+  Artix 7    -&gt; 327 Mhz 698 LUT 558 FF
+  Cyclone V  -&gt; 158 Mhz 524 ALMs
+  Cyclone IV -&gt; 146 Mhz 1,061 LUT 552 FF
+  iCE40      -&gt; 55 Mhz 1541 LC
+
+VexRiscv small and productive with I$ (RV32I, 0.72 DMIPS/Mhz, 4KB-I$)  -&gt;
+  Artix 7    -&gt; 331 Mhz 727 LUT 600 FF
+  Cyclone V  -&gt; 152 Mhz 536 ALMs
+  Cyclone IV -&gt; 156 Mhz 1,075 LUT 565 FF
+  iCE40      -&gt; 54 Mhz 1686 LC
+
+VexRiscv full no cache (RV32IM, 1.22 DMIPS/Mhz, single cycle barrel shifter, debug module, catch exceptions, static branch) -&gt;
+  Artix 7    -&gt; 295 Mhz 1399 LUT 971 FF
+  Cyclone V  -&gt; 151 Mhz 922 ALMs
+  Cyclone IV -&gt; 136 Mhz 1,859 LUT 992 FF
+
+VexRiscv full (RV32IM, 1.21 DMIPS/Mhz with cache trashing, 4KB-I$,4KB-D$, single cycle barrel shifter, debug module, catch exceptions, static branch) -&gt;
+  Artix 7    -&gt; 253 Mhz 1840 LUT 1394 FF
+  Cyclone V  -&gt; 126 Mhz 1,172 ALMs
+  Cyclone IV -&gt; 117 Mhz 2,548 LUT 1,703 FF
+
+VexRiscv full max perf -&gt; (RV32IM, 1.44 DMIPS/Mhz, 16KB-I$,16KB-D$, single cycle barrel shifter, debug module, catch exceptions, dynamic branch prediction in the fetch stage, branch and shift operations done in the Execute stage) -&gt;
+  Artix 7    -&gt; 183 Mhz 1813 LUT 1424 FF
+  Cyclone V  -&gt; 93 Mhz 1,253 ALMs
+  Cyclone IV -&gt; 84 Mhz 2,642 LUT 1,711 FF
+
+VexRiscv full with MMU (RV32IM, 1.26 DMIPS/Mhz with cache trashing, 4KB-I$, 4KB-D$, single cycle barrel shifter, debug module, catch exceptions, dynamic branch, MMU) -&gt;
+  Artix 7    -&gt; 214 Mhz 2070 LUT 1913 FF
+  Cyclone V  -&gt; 108 Mhz 1,430 ALMs
+  Cyclone IV -&gt; 100 Mhz 2,976 LUT 2,201 FF
+</pre></div>
+</div>
+<p>The following configuration results in 1.44 DMIPS/MHz:</p>
+<ul class="simple">
+<li>5 stage : F -&gt; D -&gt; E -&gt; M  -&gt; WB</li>
+<li>single cycle ADD/SUB/Bitwise/Shift ALU</li>
+<li>branch/jump done in the E stage</li>
+<li>memory load values are bypassed in the WB stage (late result)</li>
+<li>33 cycle division with bypassing in the M stage (late result)</li>
+<li>single cycle multiplication with bypassing in the WB stage (late result)</li>
+<li>dynamic branch prediction done in the F stage with a direct mapped target buffer cache (no penalties on correct predictions)</li>
+</ul>
+<p>Note that recently, the capability to remove the Fetch/Memory/WriteBack stage was added to reduce the area of the CPU, which end up with a smaller CPU and a better DMIPS/Mhz for the small configurations.</p>
+</div>
+<div class="section" id="id4">
+<h1>Dependencies<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<p>On Ubuntu 14 :</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># JAVA JDK 8. Do not try with JDK &gt;= 9</span>
+sudo add-apt-repository -y ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk -y
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+
+<span class="c1"># Install SBT - https://www.scala-sbt.org/</span>
+<span class="nb">echo</span> <span class="s2">&quot;deb https://dl.bintray.com/sbt/debian /&quot;</span> <span class="p">|</span> sudo tee -a /etc/apt/sources.list.d/sbt.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+sudo apt-get update
+sudo apt-get install sbt
+
+<span class="c1"># Verilator (for sim only, realy need 3.9+, in general apt-get will give you 3.8)</span>
+sudo apt-get install git make autoconf g++ flex bison
+git clone http://git.veripool.org/git/verilator   <span class="c1"># Only first time</span>
+unsetenv VERILATOR_ROOT  <span class="c1"># For csh; ignore error if on bash</span>
+<span class="nb">unset</span> VERILATOR_ROOT  <span class="c1"># For bash</span>
+<span class="nb">cd</span> verilator
+git pull        <span class="c1"># Make sure we&#39;re up-to-date</span>
+git checkout verilator_3_918
+autoconf        <span class="c1"># Create ./configure script</span>
+./configure
+make
+sudo make install
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h1>CPU generation<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<p>You can find two example CPU instances in:</p>
+<ul class="simple">
+<li>src/main/scala/vexriscv/GenFull.scala</li>
+<li>src/main/scala/vexriscv/GenSmallest.scala</li>
+</ul>
+<p>To generate the corresponding RTL as a VexRiscv.v file, run the following commands in the root directory of this repository:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sbt <span class="s2">&quot;runMain vexriscv.demo.GenFull&quot;</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sbt <span class="s2">&quot;runMain vexriscv.demo.GenSmallest&quot;</span>
+</pre></div>
+</div>
+<p>NOTES:</p>
+<ul class="simple">
+<li>It could take time the first time you run it.</li>
+<li><dl class="first docutils">
+<dt>The VexRiscv project may need an unreleased master-head of the SpinalHDL repo. If it fails to compile, just get the SpinalHDL repository and</dt>
+<dd>do a “sbt clean compile publish-local” in it as described in the dependencies chapter.</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h1>Regression tests<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h1>
+<p>To run tests (need the verilator simulator), go in the src/test/cpp/regression folder and run :</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># To test the GenFull CPU</span>
+<span class="c1"># (Don&#39;t worry about the CSR test not passing, basicaly the GenFull isn&#39;t the truly full version of the CPU, some CSR features are disable in it)</span>
+make clean run
+
+<span class="c1"># To test the GenSmallest CPU</span>
+make clean run <span class="nv">IBUS</span><span class="o">=</span>SIMPLE <span class="nv">DBUS</span><span class="o">=</span>SIMPLE <span class="nv">CSR</span><span class="o">=</span>no <span class="nv">MMU</span><span class="o">=</span>no <span class="nv">DEBUG_PLUGIN</span><span class="o">=</span>no <span class="nv">MUL</span><span class="o">=</span>no <span class="nv">DIV</span><span class="o">=</span>no
+</pre></div>
+</div>
+<p>The self-test includes:</p>
+<ul class="simple">
+<li>ISA tests from <a class="reference external" href="https://github.com/riscv/riscv-tests/tree/master/isa">https://github.com/riscv/riscv-tests/tree/master/isa</a></li>
+<li>Dhrystone benchmark</li>
+<li>24 FreeRTOS tests</li>
+<li>Some handwritten tests to check the CSR, debug module and MMU plugins</li>
+</ul>
+<p>You can enable FreeRTOS tests by adding <code class="docutils literal notranslate"><span class="pre">FREERTOS=yes</span></code> to the command line, but it will take time to run. Also, it uses THREAD_COUNT host CPU threads to run multiple regression in parallel.</p>
+</div>
+<div class="section" id="id7">
+<h1>Interactive debug of the simulated CPU via GDB OpenOCD and Verilator<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h1>
+<p>It’s as described to run tests, but you just have to add <code class="docutils literal notranslate"><span class="pre">DEBUG_PLUGIN_EXTERNAL=yes</span></code> in the make arguments.
+Work for the GenFull, but not for the GenSmallest as this configuration has no debug module.</p>
+<p>Then you can use the <a class="reference external" href="https://github.com/SpinalHDL/openocd_riscv">https://github.com/SpinalHDL/openocd_riscv</a> tool to create a GDB server connected to the target (the simulated CPU)</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1">#in the VexRiscv repository, to run the simulation on which one OpenOCD can connect itself =&gt;</span>
+sbt <span class="s2">&quot;runMain vexriscv.demo.GenFull&quot;</span>
+<span class="nb">cd</span> src/test/cpp/regression
+make run <span class="nv">DEBUG_PLUGIN_EXTERNAL</span><span class="o">=</span>yes
+
+<span class="c1">#In the openocd git, after building it =&gt;</span>
+src/openocd -c <span class="s2">&quot;set VEXRISCV_YAML PATH_TO_THE_GENERATED_CPU0_YAML_FILE&quot;</span> -f tcl/target/vexriscv_sim.cfg
+
+<span class="c1">#Run a GDB session with an elf RISCV executable (GenFull CPU)</span>
+YourRiscvToolsPath/bin/riscv32-unknown-elf-gdb VexRiscvRepo/src/test/resources/elf/uart.elf
+target remote localhost:3333
+monitor reset halt
+load
+<span class="k">continue</span>
+
+<span class="c1"># Now it should print messages in the Verilator simulation of the CPU</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h1>Using Eclipse to run the software and debug it<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id9">
+<h2>By using Zylin plugin<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>You can use the Eclipse + Zylin embedded CDT plugin to do it (<a class="reference external" href="http://opensource.zylin.com/embeddedcdt.html">http://opensource.zylin.com/embeddedcdt.html</a>). Tested with Helios Service Release 2 (<a class="reference external" href="http://www.Eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/helios/SR2/Eclipse-cpp-helios-SR2-linux-gtk-x86_64.tar.gz">http://www.Eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/helios/SR2/Eclipse-cpp-helios-SR2-linux-gtk-x86_64.tar.gz</a>) and the corresponding zylin plugin.</p>
+<p>To following commands will download Eclipse and install the plugin.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>wget http://www.eclipse.org/downloads/download.php?file<span class="o">=</span>/technology/epp/downloads/release/helios/SR2/eclipse-cpp-helios-SR2-linux-gtk-x86_64.tar.gz
+tar -xvzf download.php?file<span class="o">=</span>%2Ftechnology%2Fepp%2Fdownloads%2Frelease%2Fhelios%2FSR2%2Feclipse-cpp-helios-SR2-linux-gtk-x86_64.tar.gz
+<span class="nb">cd</span> eclipse
+./eclipse -application org.eclipse.equinox.p2.director -repository http://opensource.zylin.com/zylincdt -installIU com.zylin.cdt.feature.feature.group/
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://drive.google.com/drive/folders/1NseNHH05B6lmIXqQFVwK8xRjWE4ydeG">https://drive.google.com/drive/folders/1NseNHH05B6lmIXqQFVwK8xRjWE4ydeG</a>-?usp=sharing to import a makefile project and create a debug configuration.</p>
+<p>Note that sometime this Eclipse need to be restarted in order to be able to place new breakpoints.</p>
+</div>
+<div class="section" id="id10">
+<h2>By using FreedomStudio<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>You can get FreedomStudio (which is package with Eclipse and some plugins) here: <a class="reference external" href="https://www.sifive.com/products/tools/">https://www.sifive.com/products/tools/</a></p>
+<p>See <a class="reference external" href="https://drive.google.com/drive/folders/1a7FyMOYgFc9UDhfsWUSCjyqDCvOrts2J?usp=sharing">https://drive.google.com/drive/folders/1a7FyMOYgFc9UDhfsWUSCjyqDCvOrts2J?usp=sharing</a> to import a makefile project and create a debug configuration.</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h1>Briey SoC<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h1>
+<p>As a demonstrator, a SoC named Briey is implemented in <code class="docutils literal notranslate"><span class="pre">src/main/scala/vexriscv/demo/Briey.scala</span></code>. This SoC is very similar to
+the <a class="reference external" href="https://spinalhdl.github.io/SpinalDoc/spinal/lib/pinsec/hardware/">Pinsec SOC</a>:</p>
+<a class="reference external image-reference" href="/assets/brieySoc.png"><img alt="Alt text" src="../_images/brieySoc.png" /></a>
+<p>To generate the Briey SoC Hardware:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sbt <span class="s2">&quot;runMain vexriscv.demo.Briey&quot;</span>
+</pre></div>
+</div>
+<p>To run the verilator simulation of the Briey SoC which can then be connected to OpenOCD/GDB, first get those dependencies:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt-get install build-essential xorg-dev libudev-dev libts-dev libgl1-mesa-dev libglu1-mesa-dev libasound2-dev libpulse-dev libopenal-dev libogg-dev libvorbis-dev libaudiofile-dev libpng12-dev libfreetype6-dev libusb-dev libdbus-1-dev zlib1g-dev libdirectfb-dev libsdl2-dev
+</pre></div>
+</div>
+<p>Then go in <code class="docutils literal notranslate"><span class="pre">src/test/cpp/briey</span></code> and run the simulation with (UART TX is printed in the terminal, VGA is displayed in a GUI):</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make clean run
+</pre></div>
+</div>
+<p>To connect OpenOCD (<a class="reference external" href="https://github.com/SpinalHDL/openocd_riscv">https://github.com/SpinalHDL/openocd_riscv</a>) to the simulation :</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>src/openocd -f tcl/interface/jtag_tcp.cfg -c <span class="s2">&quot;set BRIEY_CPU0_YAML /home/spinalvm/Spinal/VexRiscv/cpu0.yaml&quot;</span> -f tcl/target/briey.cfg
+</pre></div>
+</div>
+<p>You can find multiple software examples and demos here: <a class="reference external" href="https://github.com/SpinalHDL/VexRiscvSocSoftware/tree/master/projects/briey">https://github.com/SpinalHDL/VexRiscvSocSoftware/tree/master/projects/briey</a></p>
+<p>You can find some FPGA projects which instantiate the Briey SoC here (DE1-SoC, DE0-Nano): <a class="reference external" href="https://drive.google.com/drive/folders/0B-CqLXDTaMbKZGdJZlZ5THAxRTQ?usp=sharing">https://drive.google.com/drive/folders/0B-CqLXDTaMbKZGdJZlZ5THAxRTQ?usp=sharing</a></p>
+<p>Here are some measurements of Briey SoC timings and area :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Artix 7    -&gt; 239 Mhz 3227 LUT 3410 FF
+Cyclone V  -&gt; 125 Mhz 2,207 ALMs
+Cyclone IV -&gt; 112 Mhz 4,594 LUT 3,620
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h1>Murax SoC<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h1>
+<p>Murax is a very light SoC (it fits in an ICE40 FPGA) which can work without any external components:</p>
+<ul class="simple">
+<li>VexRiscv RV32I[M]</li>
+<li>JTAG debugger (Eclipse/GDB/openocd ready)</li>
+<li>8 kB of on-chip ram</li>
+<li>Interrupt support</li>
+<li>APB bus for peripherals</li>
+<li>32 GPIO pin</li>
+<li>one 16 bits prescaler, two 16 bits timers</li>
+<li>one UART with tx/rx fifo</li>
+</ul>
+<p>Depending the CPU configuration, on the ICE40-hx8k FPGA with icestorm for synthesis, the full SoC has the following area/performance :</p>
+<ul class="simple">
+<li>RV32I interlocked stages =&gt; 51 Mhz, 2387 LC 0.45 DMIPS/Mhz</li>
+<li>RV32I bypassed stages    =&gt; 45 Mhz, 2718 LC 0.65 DMIPS/Mhz</li>
+</ul>
+<p>Its implementation can be found here: <code class="docutils literal notranslate"><span class="pre">src/main/scala/vexriscv/demo/Murax.scala</span></code>.</p>
+<p>To generate the Murax SoC Hardware :</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># To generate the SoC without any content in the ram</span>
+sbt <span class="s2">&quot;runMain vexriscv.demo.Murax&quot;</span>
+
+<span class="c1"># To generate the SoC with a demo program already in ram</span>
+sbt <span class="s2">&quot;runMain vexriscv.demo.MuraxWithRamInit&quot;</span>
+</pre></div>
+</div>
+<p>The demo program included by default with <code class="docutils literal notranslate"><span class="pre">MuraxWithRamInit</span></code> will blink the
+LEDs and echo characters received on the UART back to the user. To see this
+when running the Verilator sim, type some text and press enter.</p>
+<p>Then go in src/test/cpp/murax and run the simulation with :</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>make clean run
+</pre></div>
+</div>
+<p>To connect OpenOCD (<a class="reference external" href="https://github.com/SpinalHDL/openocd_riscv">https://github.com/SpinalHDL/openocd_riscv</a>) to the simulation :</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>src/openocd -f tcl/interface/jtag_tcp.cfg -c <span class="s2">&quot;set MURAX_CPU0_YAML /home/spinalvm/Spinal/VexRiscv/cpu0.yaml&quot;</span> -f tcl/target/murax.cfg
+</pre></div>
+</div>
+<p>You can find multiple software examples and demos here: <a class="reference external" href="https://github.com/SpinalHDL/VexRiscvSocSoftware/tree/master/projects/murax">https://github.com/SpinalHDL/VexRiscvSocSoftware/tree/master/projects/murax</a></p>
+<p>Here are some timing and area measurements of the Murax SoC:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Murax interlocked stages (0.45 DMIPS/Mhz, 8 bits GPIO) -&gt;
+  Artix 7    -&gt; 299 Mhz 984 LUT 1186 FF
+  Cyclone V  -&gt; 175 Mhz 710 ALMs
+  Cyclone IV -&gt; 137 Mhz 1,436 LUT 1,193 FF
+  iCE40      -&gt; 48 Mhz 2337 LC (icestorm)
+  iCE40Ultra -&gt; 20 Mhz 2337 LC (icestorm)
+
+MuraxFast bypassed stages (0.65 DMIPS/Mhz, 8 bits GPIO) -&gt;
+  Artix 7    -&gt; 294 Mhz 1128 LUT 1219 FF
+  Cyclone V  -&gt; 165 Mhz 840 ALMs
+  Cyclone IV -&gt; 141 Mhz 1,680 LUT 1,227 FF
+  iCE40      -&gt; 48 Mhz 2702 LC (icestorm)
+  iCE40Ultra -&gt; 22 Mhz 2702 LC (icestorm)
+</pre></div>
+</div>
+<p>Some scripts to generate the SoC and call the icestorm toolchain can be found here: <code class="docutils literal notranslate"><span class="pre">scripts/Murax/</span></code></p>
+<p>A toplevel simulation testbench with the same features + a GUI are implemented with SpinalSim. You can find it in <code class="docutils literal notranslate"><span class="pre">src/test/scala/vexriscv/MuraxSim.scala</span></code>.</p>
+<p>To run it :</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will generate the Murax RTL + run its testbench. You need Verilator 3.9xx installated.</span>
+sbt <span class="s2">&quot;test:runMain vexriscv.MuraxSim&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h1>Build the RISC-V GCC<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h1>
+<p>A prebuild GCC toolsuite can be found here:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.sifive.com/products/tools/">https://www.sifive.com/products/tools/</a>  =&gt; SiFive GNU Embedded Toolchain</li>
+</ul>
+<p>The VexRiscvSocSoftware makefiles are expecting to find this prebuild version in /opt/riscv/<strong>contentOfThisPreBuild</strong></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>wget https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6.tar.gz
+tar -xzvf riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6.tar.gz
+sudo mv riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6 /opt/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6
+sudo mv /opt/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6 /opt/riscv
+<span class="nb">echo</span> <span class="s1">&#39;export PATH=/opt/riscv/bin:$PATH&#39;</span> &gt;&gt; ~/.bashrc
+</pre></div>
+</div>
+<p>If you want to compile the rv32i and rv32im GCC toolchain from source code and install them in <code class="docutils literal notranslate"><span class="pre">/opt/</span></code>, do the following (will take one hour):</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Be carefull, sometime the git clone has issue to successfully clone riscv-gnu-toolchain.</span>
+sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev -y
+
+git clone --recursive https://github.com/riscv/riscv-gnu-toolchain riscv-gnu-toolchain
+<span class="nb">cd</span> riscv-gnu-toolchain
+
+<span class="nb">echo</span> <span class="s2">&quot;Starting RISC-V Toolchain build process&quot;</span>
+
+<span class="nv">ARCH</span><span class="o">=</span>rv32im
+rmdir -rf <span class="nv">$ARCH</span>
+mkdir <span class="nv">$ARCH</span><span class="p">;</span> <span class="nb">cd</span> <span class="nv">$ARCH</span>
+../configure  --prefix<span class="o">=</span>/opt/<span class="nv">$ARCH</span> --with-arch<span class="o">=</span><span class="nv">$ARCH</span> --with-abi<span class="o">=</span>ilp32
+sudo make -j4
+<span class="nb">cd</span> ..
+
+
+<span class="nv">ARCH</span><span class="o">=</span>rv32i
+rmdir -rf <span class="nv">$ARCH</span>
+mkdir <span class="nv">$ARCH</span><span class="p">;</span> <span class="nb">cd</span> <span class="nv">$ARCH</span>
+../configure  --prefix<span class="o">=</span>/opt/<span class="nv">$ARCH</span> --with-arch<span class="o">=</span><span class="nv">$ARCH</span> --with-abi<span class="o">=</span>ilp32
+sudo make -j4
+<span class="nb">cd</span> ..
+
+<span class="nb">echo</span> -e <span class="s2">&quot;\\nRISC-V Toolchain installation completed!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h1>CPU parametrization and instantiation example<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h1>
+<p>You can find many examples of different configurations in the <a class="reference external" href="https://github.com/SpinalHDL/VexRiscv/tree/master/src/main/scala/vexriscv/demo">https://github.com/SpinalHDL/VexRiscv/tree/master/src/main/scala/vexriscv/demo</a> folder.</p>
+<p>Here is one such example:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">vexriscv._</span>
+<span class="k">import</span> <span class="nn">vexriscv.plugin._</span>
+
+<span class="c1">//Instanciate one VexRiscv</span>
+<span class="k">val</span> <span class="n">cpu</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">VexRiscv</span><span class="o">(</span>
+  <span class="c1">//Provide a configuration instance</span>
+  <span class="n">config</span> <span class="k">=</span> <span class="nc">VexRiscvConfig</span><span class="o">(</span>
+    <span class="c1">//Provide a list of plugins which will futher add their logic into the CPU</span>
+    <span class="n">plugins</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nc">IBusSimplePlugin</span><span class="o">(</span>
+        <span class="n">resetVector</span> <span class="k">=</span> <span class="mh">0x00000000</span><span class="n">l</span><span class="o">,</span>
+        <span class="n">cmdForkOnSecondStage</span> <span class="k">=</span> <span class="kc">true</span><span class="o">,</span>
+        <span class="n">cmdForkPersistence</span>  <span class="k">=</span> <span class="kc">true</span>
+      <span class="o">),</span>
+      <span class="k">new</span> <span class="nc">DBusSimplePlugin</span><span class="o">(</span>
+        <span class="n">catchAddressMisaligned</span> <span class="k">=</span> <span class="kc">false</span><span class="o">,</span>
+        <span class="n">catchAccessFault</span> <span class="k">=</span> <span class="kc">false</span>
+      <span class="o">),</span>
+      <span class="k">new</span> <span class="nc">DecoderSimplePlugin</span><span class="o">(</span>
+        <span class="n">catchIllegalInstruction</span> <span class="k">=</span> <span class="kc">false</span>
+      <span class="o">),</span>
+      <span class="k">new</span> <span class="nc">RegFilePlugin</span><span class="o">(</span>
+        <span class="n">regFileReadyKind</span> <span class="k">=</span> <span class="nc">Plugin</span><span class="o">.</span><span class="nc">SYNC</span><span class="o">,</span>
+        <span class="n">zeroBoot</span> <span class="k">=</span> <span class="kc">true</span>
+      <span class="o">),</span>
+      <span class="k">new</span> <span class="nc">IntAluPlugin</span><span class="o">,</span>
+      <span class="k">new</span> <span class="nc">SrcPlugin</span><span class="o">(</span>
+        <span class="n">separatedAddSub</span> <span class="k">=</span> <span class="kc">false</span><span class="o">,</span>
+        <span class="n">executeInsertion</span> <span class="k">=</span> <span class="kc">false</span>
+      <span class="o">),</span>
+      <span class="k">new</span> <span class="nc">LightShifterPlugin</span><span class="o">,</span>
+      <span class="k">new</span> <span class="nc">HazardSimplePlugin</span><span class="o">(</span>
+        <span class="n">bypassExecute</span>           <span class="k">=</span> <span class="kc">false</span><span class="o">,</span>
+        <span class="n">bypassMemory</span>            <span class="k">=</span> <span class="kc">false</span><span class="o">,</span>
+        <span class="n">bypassWriteBack</span>         <span class="k">=</span> <span class="kc">false</span><span class="o">,</span>
+        <span class="n">bypassWriteBackBuffer</span>   <span class="k">=</span> <span class="kc">false</span>
+      <span class="o">),</span>
+      <span class="k">new</span> <span class="nc">BranchPlugin</span><span class="o">(</span>
+        <span class="n">earlyBranch</span> <span class="k">=</span> <span class="kc">false</span><span class="o">,</span>
+        <span class="n">catchAddressMisaligned</span> <span class="k">=</span> <span class="kc">false</span>
+      <span class="o">),</span>
+      <span class="k">new</span> <span class="nc">YamlPlugin</span><span class="o">(</span><span class="s">&quot;cpu0.yaml&quot;</span><span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h1>Add a custom instruction to the CPU via the plugin system<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h1>
+<p>Here is an example of a simple plugin which adds a simple SIMD_ADD instruction:</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">spinal.core._</span>
+<span class="k">import</span> <span class="nn">vexriscv.plugin.Plugin</span>
+<span class="k">import</span> <span class="nn">vexriscv.</span><span class="o">{</span><span class="nc">Stageable</span><span class="o">,</span> <span class="nc">DecoderService</span><span class="o">,</span> <span class="nc">VexRiscv</span><span class="o">}</span>
+
+<span class="c1">//This plugin example will add a new instruction named SIMD_ADD which do the following :</span>
+<span class="c1">//</span>
+<span class="c1">//RD : Regfile Destination, RS : Regfile Source</span>
+<span class="c1">//RD( 7 downto  0) = RS1( 7 downto  0) + RS2( 7 downto  0)</span>
+<span class="c1">//RD(16 downto  8) = RS1(16 downto  8) + RS2(16 downto  8)</span>
+<span class="c1">//RD(23 downto 16) = RS1(23 downto 16) + RS2(23 downto 16)</span>
+<span class="c1">//RD(31 downto 24) = RS1(31 downto 24) + RS2(31 downto 24)</span>
+<span class="c1">//</span>
+<span class="c1">//Instruction encoding :</span>
+<span class="c1">//0000011----------000-----0110011</span>
+<span class="c1">//       |RS2||RS1|   |RD |</span>
+<span class="c1">//</span>
+<span class="c1">//Note :  RS1, RS2, RD positions follow the RISC-V spec and are common for all instruction of the ISA</span>
+
+<span class="k">class</span> <span class="nc">SimdAddPlugin</span> <span class="k">extends</span> <span class="nc">Plugin</span><span class="o">[</span><span class="kt">VexRiscv</span><span class="o">]{</span>
+  <span class="c1">//Define the concept of IS_SIMD_ADD signals, which specify if the current instruction is destined for ths plugin</span>
+  <span class="k">object</span> <span class="nc">IS_SIMD_ADD</span> <span class="k">extends</span> <span class="nc">Stageable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">)</span>
+
+  <span class="c1">//Callback to setup the plugin and ask for different services</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">setup</span><span class="o">(</span><span class="n">pipeline</span><span class="k">:</span> <span class="kt">VexRiscv</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">import</span> <span class="nn">pipeline.config._</span>
+
+    <span class="c1">//Retrieve the DecoderService instance</span>
+    <span class="k">val</span> <span class="n">decoderService</span> <span class="k">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">service</span><span class="o">(</span><span class="n">classOf</span><span class="o">[</span><span class="kt">DecoderService</span><span class="o">])</span>
+
+    <span class="c1">//Specify the IS_SIMD_ADD default value when instruction are decoded</span>
+    <span class="n">decoderService</span><span class="o">.</span><span class="n">addDefault</span><span class="o">(</span><span class="nc">IS_SIMD_ADD</span><span class="o">,</span> <span class="nc">False</span><span class="o">)</span>
+
+    <span class="c1">//Specify the instruction decoding which should be applied when the instruction match the &#39;key&#39; parttern</span>
+    <span class="n">decoderService</span><span class="o">.</span><span class="n">add</span><span class="o">(</span>
+      <span class="c1">//Bit pattern of the new SIMD_ADD instruction</span>
+      <span class="n">key</span> <span class="k">=</span> <span class="n">M</span><span class="s">&quot;0000011----------000-----0110011&quot;</span><span class="o">,</span>
+
+      <span class="c1">//Decoding specification when the &#39;key&#39; pattern is recognized in the instruction</span>
+      <span class="nc">List</span><span class="o">(</span>
+        <span class="nc">IS_SIMD_ADD</span>              <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span>
+        <span class="nc">REGFILE_WRITE_VALID</span>      <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="c1">//Enable the register file write</span>
+        <span class="nc">BYPASSABLE_EXECUTE_STAGE</span> <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="c1">//Notify the hazard management unit that the instruction result is already accessible in the EXECUTE stage (Bypass ready)</span>
+        <span class="nc">BYPASSABLE_MEMORY_STAGE</span>  <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="c1">//Same as above but for the memory stage</span>
+        <span class="nc">RS1_USE</span>                  <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="c1">//Notify the hazard management unit that this instruction use the RS1 value</span>
+        <span class="nc">RS2_USE</span>                  <span class="o">-&gt;</span> <span class="nc">True</span>  <span class="c1">//Same than above but for RS2.</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">}</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">build</span><span class="o">(</span><span class="n">pipeline</span><span class="k">:</span> <span class="kt">VexRiscv</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">import</span> <span class="nn">pipeline._</span>
+    <span class="k">import</span> <span class="nn">pipeline.config._</span>
+
+    <span class="c1">//Add a new scope on the execute stage (used to give a name to signals)</span>
+    <span class="n">execute</span> <span class="n">plug</span> <span class="k">new</span> <span class="nc">Area</span> <span class="o">{</span>
+      <span class="c1">//Define some signals used internally to the plugin</span>
+      <span class="k">val</span> <span class="n">rs1</span> <span class="k">=</span> <span class="n">execute</span><span class="o">.</span><span class="n">input</span><span class="o">(</span><span class="nc">RS1</span><span class="o">).</span><span class="n">asUInt</span>
+      <span class="c1">//32 bits UInt value of the regfile[RS1]</span>
+      <span class="k">val</span> <span class="n">rs2</span> <span class="k">=</span> <span class="n">execute</span><span class="o">.</span><span class="n">input</span><span class="o">(</span><span class="nc">RS2</span><span class="o">).</span><span class="n">asUInt</span>
+      <span class="k">val</span> <span class="n">rd</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">32</span> <span class="n">bits</span><span class="o">)</span>
+
+      <span class="c1">//Do some computation</span>
+      <span class="n">rd</span><span class="o">(</span><span class="mi">7</span> <span class="n">downto</span> <span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rs1</span><span class="o">(</span><span class="mi">7</span> <span class="n">downto</span> <span class="mi">0</span><span class="o">)</span> <span class="o">+</span> <span class="n">rs2</span><span class="o">(</span><span class="mi">7</span> <span class="n">downto</span> <span class="mi">0</span><span class="o">)</span>
+      <span class="n">rd</span><span class="o">(</span><span class="mi">16</span> <span class="n">downto</span> <span class="mi">8</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rs1</span><span class="o">(</span><span class="mi">16</span> <span class="n">downto</span> <span class="mi">8</span><span class="o">)</span> <span class="o">+</span> <span class="n">rs2</span><span class="o">(</span><span class="mi">16</span> <span class="n">downto</span> <span class="mi">8</span><span class="o">)</span>
+      <span class="n">rd</span><span class="o">(</span><span class="mi">23</span> <span class="n">downto</span> <span class="mi">16</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rs1</span><span class="o">(</span><span class="mi">23</span> <span class="n">downto</span> <span class="mi">16</span><span class="o">)</span> <span class="o">+</span> <span class="n">rs2</span><span class="o">(</span><span class="mi">23</span> <span class="n">downto</span> <span class="mi">16</span><span class="o">)</span>
+      <span class="n">rd</span><span class="o">(</span><span class="mi">31</span> <span class="n">downto</span> <span class="mi">24</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rs1</span><span class="o">(</span><span class="mi">31</span> <span class="n">downto</span> <span class="mi">24</span><span class="o">)</span> <span class="o">+</span> <span class="n">rs2</span><span class="o">(</span><span class="mi">31</span> <span class="n">downto</span> <span class="mi">24</span><span class="o">)</span>
+
+      <span class="c1">//When the instruction is a SIMD_ADD one, then write the result into the register file data path.</span>
+      <span class="n">when</span><span class="o">(</span><span class="n">execute</span><span class="o">.</span><span class="n">input</span><span class="o">(</span><span class="nc">IS_SIMD_ADD</span><span class="o">))</span> <span class="o">{</span>
+        <span class="n">execute</span><span class="o">.</span><span class="n">output</span><span class="o">(</span><span class="nc">REGFILE_WRITE_DATA</span><span class="o">)</span> <span class="o">:=</span> <span class="n">rd</span><span class="o">.</span><span class="n">asBits</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>If you want to add this plugin to a given CPU, you just need to add it to its parameterized plugin list.</p>
+<p>This example is a very simple one, but each plugin can really have access to the whole CPU:</p>
+<ul class="simple">
+<li>Halt a given stage of the CPU</li>
+<li>Unschedule instructions</li>
+<li>Emit an exception</li>
+<li>Introduce new instruction decoding specification</li>
+<li>Ask to jump the PC somewhere</li>
+<li>Read signals published by other plugins</li>
+<li>override published signals values</li>
+<li>Provide an alternative implementation</li>
+<li>…</li>
+</ul>
+<p>As a demonstrator, this SimdAddPlugin was integrated in the <code class="docutils literal notranslate"><span class="pre">src/main/scala/vexriscv/demo/GenCustomSimdAdd.scala</span></code> CPU configuration
+and is self-tested by the <code class="docutils literal notranslate"><span class="pre">src/test/cpp/custom/simd_add</span></code> application by running the following commands :</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate the CPU</span>
+sbt <span class="s2">&quot;runMain vexriscv.demo.GenCustomSimdAdd&quot;</span>
+
+<span class="nb">cd</span> src/test/cpp/regression/
+
+<span class="c1"># Optionally add TRACE=yes if you want to get the VCD waveform from the simulation.</span>
+<span class="c1"># Also you have to know that by default, the testbench introduce instruction/data bus stall.</span>
+<span class="c1"># Note the CUSTOM_SIMD_ADD flag is set to yes.</span>
+make clean run <span class="nv">IBUS</span><span class="o">=</span>SIMPLE <span class="nv">DBUS</span><span class="o">=</span>SIMPLE <span class="nv">CSR</span><span class="o">=</span>no <span class="nv">MMU</span><span class="o">=</span>no <span class="nv">DEBUG_PLUGIN</span><span class="o">=</span>no <span class="nv">MUL</span><span class="o">=</span>no <span class="nv">DIV</span><span class="o">=</span>no <span class="nv">DHRYSTONE</span><span class="o">=</span>no <span class="nv">REDO</span><span class="o">=</span><span class="m">2</span> <span class="nv">CUSTOM_SIMD_ADD</span><span class="o">=</span>yes
+</pre></div>
+</div>
+<p>To retrieve the plugin related signals in your waveform viewer, just filter with <code class="docutils literal notranslate"><span class="pre">simd</span></code>.</p>
+</div>
+<div class="section" id="id16">
+<h1>Adding a new CSR via the plugin system<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h1>
+<p>Here are two examples about how to add a custom CSR to the CPU via the plugin system:
+<a class="reference external" href="https://github.com/SpinalHDL/VexRiscv/blob/master/src/main/scala/vexriscv/demo/CustomCsrDemoPlugin.scala">https://github.com/SpinalHDL/VexRiscv/blob/master/src/main/scala/vexriscv/demo/CustomCsrDemoPlugin.scala</a></p>
+<p>The first one (<code class="docutils literal notranslate"><span class="pre">CustomCsrDemoPlugin</span></code>) adds an instruction counter and a clock cycle counter into the CSR mapping (and also do tricky stuff as a demonstration).</p>
+<p>The second one (<code class="docutils literal notranslate"><span class="pre">CustomCsrDemoGpioPlugin</span></code>) creates a GPIO peripheral directly mapped into the CSR.</p>
+</div>
+<div class="section" id="id17">
+<h1>CPU clock and resets<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h1>
+<p>Without the debug plugin, the CPU will have a standard <code class="docutils literal notranslate"><span class="pre">clk</span></code> input and a <code class="docutils literal notranslate"><span class="pre">reset</span></code> input. But with the debug plugin the situation is the following :</p>
+<ul class="simple">
+<li>clk : As before, the clock which drive the whole CPU design, including the debug logic</li>
+<li>reset : Reset all the CPU states excepted the debug logics</li>
+<li>debugReset : Reset the debug logic of the CPU</li>
+<li>debug_resetOut : a CPU output signal which allows the JTAG to reset the CPU + the memory interconnect + the peripherals</li>
+</ul>
+<p>So here is the reset interconnect in case you use the debug plugin :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                                VexRiscv
+                            +------------------+
+                            |                  |
+toplevelReset &gt;----+--------&gt; debugReset       |
+                   |        |                  |
+                   |  +-----&lt; debug_resetOut   |
+                   |  |     |                  |
+                   +--or&gt;-+-&gt; reset            |
+                          | |                  |
+                          | +------------------+
+                          |
+                          +-&gt; Interconnect / Peripherals
+</pre></div>
+</div>
+</div>
+<div class="section" id="id18">
+<h1>VexRiscv Architecture<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h1>
+<p>VexRiscv is implemented via a 5 stage in-order pipeline on which many optional and complementary plugins add functionalities to provide a functional RISC-V CPU.
+This approach is completely unconventional and only possible through meta hardware description languages (SpinalHDL in the current case) but has proven its advantages
+via the VexRiscv implementation:</p>
+<ul class="simple">
+<li>You can swap/turn on/turn off parts of the CPU directly via the plugin system</li>
+<li>You can add new functionalities/instruction without having to modify any sources code of the CPU</li>
+<li>It allows the CPU configuration to cover a very large spectrum of implementation without cooking spaghetti code</li>
+<li>It allows your code base to truly produce a parametrized CPU design</li>
+</ul>
+<p>If you generate the CPU without any plugin, it will only contain the definition of the 5 pipeline stages and their basic arbitration, but nothing else,
+as everything else, including the program counter is added into the CPU via plugins.</p>
+<div class="section" id="id19">
+<h2>Plugins<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<p>This chapter describes plugins currently implemented.</p>
+<ul class="simple">
+<li><a class="reference external" href="#ibussimpleplugin">IBusSimplePlugin</a></li>
+<li><a class="reference external" href="#ibuscachedplugin">IBusCachedPlugin</a></li>
+<li><a class="reference external" href="#decodersimpleplugin">DecoderSimplePlugin</a></li>
+<li><a class="reference external" href="#regfileplugin">RegFilePlugin</a></li>
+<li><a class="reference external" href="#hazardsimpleplugin">HazardSimplePlugin</a></li>
+<li><a class="reference external" href="#srcplugin">SrcPlugin</a></li>
+<li><a class="reference external" href="#intaluplugin">IntAluPlugin</a></li>
+<li><a class="reference external" href="#lightshifterplugin">LightShifterPlugin</a></li>
+<li><a class="reference external" href="#fullbarrelshifterplugin">FullBarrelShifterPlugin</a></li>
+<li><a class="reference external" href="#branchplugin">BranchPlugin</a></li>
+<li><a class="reference external" href="#dbussimpleplugin">DBusSimplePlugin</a></li>
+<li><a class="reference external" href="#dbuscachedplugin">DBusCachedPlugin</a></li>
+<li><a class="reference external" href="#mulplugin">MulPlugin</a></li>
+<li><a class="reference external" href="#divplugin">DivPlugin</a></li>
+<li><a class="reference external" href="#muldiviterativeplugin">MulDivIterativePlugin</a></li>
+<li><a class="reference external" href="#csrplugin">CsrPlugin</a></li>
+<li><a class="reference external" href="#staticmemorytranslatorplugin">StaticMemoryTranslatorPlugin</a></li>
+<li><a class="reference external" href="#memorytranslatorplugin">MemoryTranslatorPlugin</a></li>
+<li><a class="reference external" href="#debugplugin">DebugPlugin</a></li>
+<li><a class="reference external" href="#yamlplugin">YamlPlugin</a></li>
+</ul>
+<div class="section" id="id20">
+<h3>IBusSimplePlugin<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p>This plugin implement the CPU frontend (instruction fetch) via a very simple and neutral memory interface going outside the CPU.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>catchAccessFault</td>
+<td>Boolean</td>
+<td>If an the read response specify an read error and this parameter is true, it will generate an CPU exception trap</td>
+</tr>
+<tr class="row-odd"><td>resetVector</td>
+<td>BigInt</td>
+<td>Address of the program counter after the reset</td>
+</tr>
+<tr class="row-even"><td>cmdForkOnSecondStage</td>
+<td>Boolean</td>
+<td>By default jump have an asynchronous immediate effect on the program counter, which allow to reduce the branch penalties by one cycle but could reduce the FMax as it will combinatorialy drive the instruction bus address signal. To avoid this you can set this parameter to true, which will make the jump affecting the programm counter in a sequancial way, which will cut the combinatorial path but add one additional cycle of penalty when a jump occur.</td>
+</tr>
+<tr class="row-odd"><td>cmdForkPersistence</td>
+<td>Boolean</td>
+<td>If this parameter is false, then request on the iBus can disappear/change before their completion. Which reduce area but isn’t safe/supported by many arbitration/slaves. If you set this parameter to true, then the iBus cmd will stay until they are completed.</td>
+</tr>
+<tr class="row-even"><td>compressedGen</td>
+<td>Boolean</td>
+<td>Enable RVC support</td>
+</tr>
+<tr class="row-odd"><td>busLatencyMin</td>
+<td>Int</td>
+<td>Specify the minimal latency between the iBus.cmd and iBus.rsp, which will add the corresponding number of stages into the frontend to keep the IPC to 1.</td>
+</tr>
+<tr class="row-even"><td>injectorStage</td>
+<td>Boolean</td>
+<td>Add a stage between the frontend and the decode stage of the CPU to improve FMax. (busLatencyMin + injectorStage) should be at least two.</td>
+</tr>
+<tr class="row-odd"><td>prediction</td>
+<td>BranchPrediction</td>
+<td>Can be set to NONE/STATIC/DYNAMIC/DYNAMIC_TARGET to specify the branch predictor implementation, see bellow for more descriptions</td>
+</tr>
+<tr class="row-even"><td>historyRamSizeLog2</td>
+<td>Int</td>
+<td>Specify the number of entries in the direct mapped prediction cache of DYNAMIC/DYNAMIC_TARGET implementation. 2 pow historyRamSizeLog2 entries</td>
+</tr>
+</tbody>
+</table>
+<p>Here is the SimpleBus interface definition</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="k">class</span> <span class="nc">IBusSimpleCmd</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Bundle</span><span class="o">{</span>
+  <span class="k">val</span> <span class="n">pc</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">32</span> <span class="n">bits</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">IBusSimpleRsp</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="k">with</span> <span class="nc">IMasterSlave</span><span class="o">{</span>
+  <span class="k">val</span> <span class="n">error</span> <span class="k">=</span> <span class="nc">Bool</span>
+  <span class="k">val</span> <span class="n">inst</span>  <span class="k">=</span> <span class="nc">Bits</span><span class="o">(</span><span class="mi">32</span> <span class="n">bits</span><span class="o">)</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">asMaster</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">out</span><span class="o">(</span><span class="n">error</span><span class="o">,</span><span class="n">inst</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">IBusSimpleBus</span><span class="o">(</span><span class="n">interfaceKeepData</span> <span class="k">:</span> <span class="kt">Boolean</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="k">with</span> <span class="nc">IMasterSlave</span><span class="o">{</span>
+  <span class="k">var</span> <span class="n">cmd</span> <span class="k">=</span> <span class="nc">Stream</span><span class="o">(</span><span class="nc">IBusSimpleCmd</span><span class="o">())</span>
+  <span class="k">var</span> <span class="n">rsp</span> <span class="k">=</span> <span class="nc">Flow</span><span class="o">(</span><span class="nc">IBusSimpleRsp</span><span class="o">())</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">asMaster</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">master</span><span class="o">(</span><span class="n">cmd</span><span class="o">)</span>
+    <span class="n">slave</span><span class="o">(</span><span class="n">rsp</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p><strong>Important</strong> : Checkout the cmdForkPersistence parameter, because if it’s not set, it can break the iBus compatibility with your memory system (unless you externaly add some buffers)</p>
+<p>Setting cmdForkPersistence and cmdForkOnSecondStage improves iBus cmd timings.</p>
+<p>Note that bridges are implemented to convert this interface into AXI4 and Avalon</p>
+<p>The jump interface implemented by this plugin allow all other plugin to request jumps. The stage argument specify from which stage the jump is asked, which will allow the PcManagerSimplePlugin plugin to manage priorities between jump requests.</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">trait</span> <span class="nc">JumpService</span><span class="o">{</span>
+  <span class="k">def</span> <span class="n">createJumpInterface</span><span class="o">(</span><span class="n">stage</span> <span class="k">:</span> <span class="kt">Stage</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Flow</span><span class="o">[</span><span class="kt">UInt</span><span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id21">
+<h3>IBusCachedPlugin<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>Simple and light multi-way instruction cache.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cacheSize</td>
+<td>Int</td>
+<td>Total storage capacity of the cache</td>
+</tr>
+<tr class="row-odd"><td>bytePerLine</td>
+<td>Int</td>
+<td>Number of bytes per cache line</td>
+</tr>
+<tr class="row-even"><td>wayCount</td>
+<td>Int</td>
+<td>Number of cache ways</td>
+</tr>
+<tr class="row-odd"><td>twoCycleRam</td>
+<td>Boolean</td>
+<td>Check the tags values in the decode stage instead of the fetch stage to relax timings</td>
+</tr>
+<tr class="row-even"><td>asyncTagMemory</td>
+<td>Boolean</td>
+<td>Read the cache tags in a asyncronus manner instead of syncronous one</td>
+</tr>
+<tr class="row-odd"><td>addressWidth</td>
+<td>Int</td>
+<td>Address width, should be 32</td>
+</tr>
+<tr class="row-even"><td>cpuDataWidth</td>
+<td>Int</td>
+<td>Cpu data width, should be 32</td>
+</tr>
+<tr class="row-odd"><td>memDataWidth</td>
+<td>Int</td>
+<td>Memory data width, could potentialy be something else than 32, but only 32 is currently tested</td>
+</tr>
+<tr class="row-even"><td>catchIllegalAccess</td>
+<td>Boolean</td>
+<td>Catch when a memory access is done on non valid memory address (MMU)</td>
+</tr>
+<tr class="row-odd"><td>catchAccessFault</td>
+<td>Boolean</td>
+<td>Catch when the memeory bus is responding with an error</td>
+</tr>
+<tr class="row-even"><td>catchMemoryTranslationMiss</td>
+<td>Boolean</td>
+<td>Catch when the MMU miss a TLB</td>
+</tr>
+<tr class="row-odd"><td>resetVector</td>
+<td>BigInt</td>
+<td>Address of the program counter after the reset</td>
+</tr>
+<tr class="row-even"><td>relaxedPcCalculation</td>
+<td>Boolean</td>
+<td>By default jump have an asynchronous immediate effect on the program counter, which allow to reduce the branch penalties by one cycle but could reduce the FMax as it will combinatorialy drive the instruction bus address signal. To avoid this you can set this parameter to true, which will make the jump affecting the programm counter in a sequancial way, which will cut the combinatorial path but add one additional cycle of penalty when a jump occur.</td>
+</tr>
+<tr class="row-odd"><td>compressedGen</td>
+<td>Boolean</td>
+<td>Enable RVC support</td>
+</tr>
+<tr class="row-even"><td>prediction</td>
+<td>BranchPrediction</td>
+<td>Can be set to NONE/STATIC/DYNAMIC/DYNAMIC_TARGET to specify the branch predictor implementation, see bellow for more descriptions</td>
+</tr>
+<tr class="row-odd"><td>historyRamSizeLog2</td>
+<td>Int</td>
+<td>Specify the number of entries in the direct mapped prediction cache of DYNAMIC/DYNAMIC_TARGET implementation. 2 pow historyRamSizeLog2 entries</td>
+</tr>
+</tbody>
+</table>
+<p>Note: If you enable the twoCycleRam option and if wayCount is bigger than one, then the register file plugin should be configured to read the regFile in a asynchronous manner.</p>
+</div>
+<div class="section" id="id22">
+<h3>DecoderSimplePlugin<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p>This plugin provides instruction decoding capabilities to others plugins.</p>
+<p>For instance, for a given instruction, the pipeline hazard plugin needs to know if it uses the register file source 1/2 in order stall the pipeline until the hazard is gone.
+To provide this kind of information, each plugin which implements an instruction documents this kind of information to the DecoderSimplePlugin plugin.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>catchIllegalInstruction</td>
+<td>Boolean</td>
+<td>If set to true, instruction which have no decoding specification will generate a trap exception</td>
+</tr>
+</tbody>
+</table>
+<p>Here is a usage example :</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span>  <span class="c1">//Specify the instruction decoding which should be applied when the instruction match the &#39;key&#39; pattern</span>
+  <span class="n">decoderService</span><span class="o">.</span><span class="n">add</span><span class="o">(</span>
+    <span class="c1">//Bit pattern of the new instruction</span>
+    <span class="n">key</span> <span class="k">=</span> <span class="n">M</span><span class="s">&quot;0000011----------000-----0110011&quot;</span><span class="o">,</span>
+
+    <span class="c1">//Decoding specification when the &#39;key&#39; pattern is recognized in the instruction</span>
+    <span class="nc">List</span><span class="o">(</span>
+      <span class="nc">IS_SIMD_ADD</span>              <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span>
+      <span class="nc">REGFILE_WRITE_VALID</span>      <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="c1">//Enable the register file write</span>
+      <span class="nc">BYPASSABLE_EXECUTE_STAGE</span> <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="c1">//Notify the hazard management unit that the instruction result is already accessible in the EXECUTE stage (Bypass ready)</span>
+      <span class="nc">BYPASSABLE_MEMORY_STAGE</span>  <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="c1">//Same as above but for the memory stage</span>
+      <span class="nc">RS1_USE</span>                  <span class="o">-&gt;</span> <span class="nc">True</span><span class="o">,</span> <span class="c1">//Notify the hazard management unit that this instruction use the RS1 value</span>
+      <span class="nc">RS2_USE</span>                  <span class="o">-&gt;</span> <span class="nc">True</span>  <span class="c1">//Same than above but for RS2.</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>This plugin operates in the Decode stage.</p>
+</div>
+<div class="section" id="id23">
+<h3>RegFilePlugin<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<p>This plugin implements the register file.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>regFileReadyKind</td>
+<td>RegFileReadKind</td>
+<td>Can bet set to ASYNC or SYNC. Specifies the kind of memory read used to implement the register file. ASYNC means zero cycle latency memory read, while SYNC means one cycle latency memory read which can be mapped into standard FPGA memory blocks</td>
+</tr>
+<tr class="row-odd"><td>zeroBoot</td>
+<td>Boolean</td>
+<td>Load all registers with zeroes at the beginning of simulations to keep everything deterministic in logs/traces</td>
+</tr>
+</tbody>
+</table>
+<p>This register file use a <code class="docutils literal notranslate"><span class="pre">don't</span> <span class="pre">care</span></code> read-during-write policy, so the bypassing/hazard plugin should take care of this.</p>
+</div>
+<div class="section" id="id24">
+<h3>HazardSimplePlugin<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<p>This plugin checks the pipeline instruction dependencies and, if necessary or possible, will stop the instruction in the decoding stage or bypass the instruction results
+from the later stages to the decode stage.</p>
+<p>Since the register file is implemented with a <code class="docutils literal notranslate"><span class="pre">don't</span> <span class="pre">care</span></code> read-during-write policy, this plugin also manages these kind of hazards.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>bypassExecute</td>
+<td>Boolean</td>
+<td>Enable the bypassing of instruction results coming from the Execute stage</td>
+</tr>
+<tr class="row-odd"><td>bypassMemory</td>
+<td>Boolean</td>
+<td>Enable the bypassing of instruction results coming from the Memory stage</td>
+</tr>
+<tr class="row-even"><td>bypassWriteBack</td>
+<td>Boolean</td>
+<td>Enable the bypassing of instruction results coming from the WriteBack stage</td>
+</tr>
+<tr class="row-odd"><td>bypassWriteBackBuffer</td>
+<td>Boolean</td>
+<td>Enable the bypassing of the previous cycle register file written value</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id25">
+<h3>SrcPlugin<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<p>This plugin muxes different input values to produce SRC1/SRC2/SRC_ADD/SRC_SUB/SRC_LESS values which are common values used by many plugins in the execute stage (ALU/Branch/Load/Store).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>separatedAddSub</td>
+<td>RegFileReadKind</td>
+<td>By default SRC_ADD/SRC_SUB are generated from a single controllable adder/substractor, but if this is set to true, it use separate adder/substractors</td>
+</tr>
+<tr class="row-odd"><td>executeInsertion</td>
+<td>Boolean</td>
+<td>By default SRC1/SRC2 are generated in the Decode stage, but if this parameter is true, it is done in the Execute stage (It will relax the bypassing network)</td>
+</tr>
+</tbody>
+</table>
+<p>Except for SRC1/SRC2, this plugin does everything at the begining of Execute stage.</p>
+</div>
+<div class="section" id="id26">
+<h3>IntAluPlugin<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<p>This plugin implements all ADD/SUB/SLT/SLTU/XOR/OR/AND/LUI/AUIPC instructions in the execute stage by using the SrcPlugin outputs. It is a realy simple plugin.</p>
+<p>The result is injected into the pipeline directly at the end of the execute stage.</p>
+</div>
+<div class="section" id="id27">
+<h3>LightShifterPlugin<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<p>Implements SLL/SRL/SRA instructions by using an iterative shifter register, while using one cycle per bit shift.</p>
+<p>The result is injected into the pipeline directly at the end of the execute stage.</p>
+</div>
+<div class="section" id="id28">
+<h3>FullBarrelShifterPlugin<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<p>Implements SLL/SRL/SRA instructions by using a full barrel shifter, so it execute all shifts in a single cycle.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>earlyInjection</td>
+<td>Boolean</td>
+<td>By default the result of the shift is injected into the pipeline in the Memory stage to relax timings, but if this option is true it will be done in the Execute stage</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id29">
+<h3>BranchPlugin<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<p>This plugin implement all branch/jump instructions (JAL/JALR/BEQ/BNE/BLT/BGE/BLTU/BGEU) with primitives used by the cpu frontend plugins to implement branch prediction. The prediction implementation is set in the frontend plugins (IBusX)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>earlyBranch</td>
+<td>Boolean</td>
+<td>By default the branch is done in the Memory stage to relax timings, but if this option is set it’s done in the Execute stage</td>
+</tr>
+<tr class="row-odd"><td>catchAddressMisaligned</td>
+<td>Boolean</td>
+<td>If a jump/branch is done in an unaligned PC address, it will fire an trap exception</td>
+</tr>
+</tbody>
+</table>
+<p>Each miss predicted jumps will produce between 2 and 4 cycles penalty depending the <code class="docutils literal notranslate"><span class="pre">earlyBranch</span></code> and the <code class="docutils literal notranslate"><span class="pre">PcManagerSimplePlugin.relaxedPcCalculation</span></code> configurations</p>
+<div class="section" id="prediction-none">
+<h4>Prediction NONE<a class="headerlink" href="#prediction-none" title="Permalink to this headline">¶</a></h4>
+<p>No prediction: each PC change due to a jump/branch will produce a penalty.</p>
+</div>
+<div class="section" id="prediction-static">
+<h4>Prediction STATIC<a class="headerlink" href="#prediction-static" title="Permalink to this headline">¶</a></h4>
+<p>In the decode stage, a conditional branch pointing backwards or a JAL is branched speculatively. If the speculation is right, the branch penalty is reduced to a single cycle,
+otherwise the standard penalty is applied.</p>
+</div>
+<div class="section" id="prediction-dynamic">
+<h4>Prediction DYNAMIC<a class="headerlink" href="#prediction-dynamic" title="Permalink to this headline">¶</a></h4>
+<p>Same as the STATIC prediction, except that to do the prediction, it use a direct mapped 2 bit history cache (BHT) which remembers if the branch is more likely to be taken or not.</p>
+</div>
+<div class="section" id="prediction-dynamic-target">
+<h4>Prediction DYNAMIC_TARGET<a class="headerlink" href="#prediction-dynamic-target" title="Permalink to this headline">¶</a></h4>
+<p>This predictor uses a direct mapped branch target buffer (BTB) in the Fetch stage which store the PC of the instruction, the target PC of the instruction and a 2 bit history to remember
+if the branch is more likely to be taken or not. This is the most efficient branch predictor actualy implemented on VexRiscv as when the branch prediction is right, it produce no branch penalty.
+The down side is that this predictor has a long combinatorial path coming from the prediction cache read port to the programm counter by passing through the jump interface.</p>
+</div>
+</div>
+<div class="section" id="id30">
+<h3>DBusSimplePlugin<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<p>This plugin implements the load and store instructions (LB/LH/LW/LBU/LHU/LWU/SB/SH/SW) via a simple and neutral memory bus going out of the CPU.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>catchAddressMisaligned</td>
+<td>Boolean</td>
+<td>If a memory access is done to an unaligned memory address, it will fire a trap exception</td>
+</tr>
+<tr class="row-odd"><td>catchAccessFault</td>
+<td>Boolean</td>
+<td>If a memory read returns an error, it will fire a trap exception</td>
+</tr>
+<tr class="row-even"><td>earlyInjection</td>
+<td>Boolean</td>
+<td>By default, the memory read values are injected into the pipeline in the WriteBack stage to relax the timings. If this parameter is true, it’s done in the Memory stage</td>
+</tr>
+</tbody>
+</table>
+<p>Here is the DBusSimpleBus</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="k">class</span> <span class="nc">DBusSimpleCmd</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Bundle</span><span class="o">{</span>
+  <span class="k">val</span> <span class="n">wr</span> <span class="k">=</span> <span class="nc">Bool</span>
+  <span class="k">val</span> <span class="n">address</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">32</span> <span class="n">bits</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">data</span> <span class="k">=</span> <span class="nc">Bits</span><span class="o">(</span><span class="mi">32</span> <span class="n">bit</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">size</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">2</span> <span class="n">bit</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">DBusSimpleRsp</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="k">with</span> <span class="nc">IMasterSlave</span><span class="o">{</span>
+  <span class="k">val</span> <span class="n">ready</span> <span class="k">=</span> <span class="nc">Bool</span>
+  <span class="k">val</span> <span class="n">error</span> <span class="k">=</span> <span class="nc">Bool</span>
+  <span class="k">val</span> <span class="n">data</span> <span class="k">=</span> <span class="nc">Bits</span><span class="o">(</span><span class="mi">32</span> <span class="n">bit</span><span class="o">)</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">asMaster</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">out</span><span class="o">(</span><span class="n">ready</span><span class="o">,</span><span class="n">error</span><span class="o">,</span><span class="n">data</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">DBusSimpleBus</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="k">with</span> <span class="nc">IMasterSlave</span><span class="o">{</span>
+  <span class="k">val</span> <span class="n">cmd</span> <span class="k">=</span> <span class="nc">Stream</span><span class="o">(</span><span class="nc">DBusSimpleCmd</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">rsp</span> <span class="k">=</span> <span class="nc">DBusSimpleRsp</span><span class="o">()</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">asMaster</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">master</span><span class="o">(</span><span class="n">cmd</span><span class="o">)</span>
+    <span class="n">slave</span><span class="o">(</span><span class="n">rsp</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Note that bridges are available to convert this interface into AXI4 and Avalon</p>
+<p>There is at least one cycle latency between a cmd and the corresponding rsp. The rsp.ready flag should be false after a read cmd until the rsp is present.</p>
+</div>
+<div class="section" id="id31">
+<h3>DBusCachedPlugin<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<p>Single way cache implementation with a victim buffer. (Documentation is WIP)</p>
+</div>
+<div class="section" id="id32">
+<h3>MulPlugin<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<p>Implements the multiplication instruction from the RISC-V M extension. Its implementation was done in a FPGA friendly way by using 4 17*17 bit multiplications.
+The processing is fully pipelined between the Execute/Memory/Writeback stage. The results of the instructions are always inserted in the WriteBack stage.</p>
+</div>
+<div class="section" id="id33">
+<h3>DivPlugin<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<p>Implements the division/modulo instruction from the RISC-V M extension. It is done in a simple iterative way which always takes 34 cycles. The result is inserted into the
+Memory stage.</p>
+<p>This plugin is now based on the MulDivIterativePlugin one.</p>
+</div>
+<div class="section" id="id34">
+<h3>MulDivIterativePlugin<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<p>This plugin implements the multiplication, division and modulo of the RISC-V M extension in an iterative way, which is friendly for small FPGAs that don’t have DSP blocks.</p>
+<p>This plugin is able to unroll the iterative calculation process to reduce the number of cycles used to execute mul/div instructions.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>genMul</td>
+<td>Boolean</td>
+<td>Enables multiplication support. Can be set to false if you want to use the MulPlugin instead</td>
+</tr>
+<tr class="row-odd"><td>genDiv</td>
+<td>Boolean</td>
+<td>Enables division support</td>
+</tr>
+<tr class="row-even"><td>mulUnrollFactor</td>
+<td>Int</td>
+<td>Number of combinatorial stages used to speed up the multiplication, should be &gt; 0</td>
+</tr>
+<tr class="row-odd"><td>divUnrollFactor</td>
+<td>Int</td>
+<td>Number of combinatorial stages used to speed up the division, should be &gt; 0</td>
+</tr>
+</tbody>
+</table>
+<p>The number of cycles used to execute a multiplication is ‘32/mulUnrollFactor’
+The number of cycles used to execute a division is ‘32/divUnrollFactor + 1’</p>
+<p>Both mul/div are processed into the memory stage (late result).</p>
+</div>
+<div class="section" id="id35">
+<h3>CsrPlugin<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<p>Implements most of the Machine mode and a few of the User mode registers as specified in the RISC-V priviledged spec.
+The access mode of most of the CSR is parameterizable (NONE/READ_ONLY/WRITE_ONLY/READ_WRITE) to reduce the area usage of unneeded features.</p>
+<p>(CsrAccess can be NONE/READ_ONLY/WRITE_ONLY/READ_WRITE)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>catchIllegalAccess</td>
+<td>Boolean</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>mvendorid</td>
+<td>BigInt</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>marchid</td>
+<td>BigInt</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>mimpid</td>
+<td>BigInt</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>mhartid</td>
+<td>BigInt</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>misaExtensionsInit</td>
+<td>Int</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>misaAccess</td>
+<td>CsrAccess</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>mtvecAccess</td>
+<td>CsrAccess</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>mtvecInit</td>
+<td>BigInt</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>mepcAccess</td>
+<td>CsrAccess</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>mscratchGen</td>
+<td>Boolean</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>mcauseAccess</td>
+<td>CsrAccess</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>mbadaddrAccess</td>
+<td>CsrAccess</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>mcycleAccess</td>
+<td>CsrAccess</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>minstretAccess</td>
+<td>CsrAccess</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ucycleAccess</td>
+<td>CsrAccess</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>wfiGen</td>
+<td>Boolean</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>ecallGen</td>
+<td>Boolean</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<p>If an interrupt occurs, before jumping to mtvec, the plugin will stop the Prefetch stage and wait for all the instructions in the later pipeline stages to complete their execution.</p>
+<p>If an exception occur, the plugin will kill the corresponding instruction, flush all previous instructions, and wait until the previously killed instructions reach the WriteBack
+stage before jumping to mtvec.</p>
+</div>
+<div class="section" id="id36">
+<h3>StaticMemoryTranslatorPlugin<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<p>Static memory translator plugin which allows one to specify which range of the memory addresses is IO mapped and shouldn’t be cached.</p>
+</div>
+<div class="section" id="id37">
+<h3>MemoryTranslatorPlugin<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<p>Simple software refilled MMU implementation. Allows others plugins such as DBusCachedPlugin/IBusCachedPlugin to instanciate memory address translation ports. Each port has a small dedicated
+fully associative TLB cache which is refilled from a larger software filled TLB cache via a query which looks up one entry per cycle.</p>
+</div>
+<div class="section" id="id38">
+<h3>DebugPlugin<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<p>This plugin implements enough CPU debug features to allow comfortable GDB/Eclipse debugging. To access those debug features, it provides a simple memory bus interface.
+The JTAG interface is provided by another bridge, which makes it possible to efficiently connect multiple CPUs to the same JTAG.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameters</th>
+<th class="head">type</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>debugClockDomain</td>
+<td>ClockDomain</td>
+<td>As the debug unit is able to reset the CPU itself, it should use another clock domain to avoid killing itself (only the reset wire should differ)</td>
+</tr>
+</tbody>
+</table>
+<p>The internals of the debug plugin are done in a manner which reduces the area usage and the FMax impact of this plugin.</p>
+<p>Here is the simple bus to access it, the rsp come one cycle after the request :</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="k">class</span> <span class="nc">DebugExtensionCmd</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Bundle</span><span class="o">{</span>
+  <span class="k">val</span> <span class="n">wr</span> <span class="k">=</span> <span class="nc">Bool</span>
+  <span class="k">val</span> <span class="n">address</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">8</span> <span class="n">bit</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">data</span> <span class="k">=</span> <span class="nc">Bits</span><span class="o">(</span><span class="mi">32</span> <span class="n">bit</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">DebugExtensionRsp</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Bundle</span><span class="o">{</span>
+  <span class="k">val</span> <span class="n">data</span> <span class="k">=</span> <span class="nc">Bits</span><span class="o">(</span><span class="mi">32</span> <span class="n">bit</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">DebugExtensionBus</span><span class="o">()</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="k">with</span> <span class="nc">IMasterSlave</span><span class="o">{</span>
+  <span class="k">val</span> <span class="n">cmd</span> <span class="k">=</span> <span class="nc">Stream</span><span class="o">(</span><span class="nc">DebugExtensionCmd</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">rsp</span> <span class="k">=</span> <span class="nc">DebugExtensionRsp</span><span class="o">()</span>
+
+  <span class="k">override</span> <span class="k">def</span> <span class="n">asMaster</span><span class="o">()</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">master</span><span class="o">(</span><span class="n">cmd</span><span class="o">)</span>
+    <span class="n">in</span><span class="o">(</span><span class="n">rsp</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Here is the register mapping :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Read address 0x00 -&gt;
+  bit 0  : resetIt
+  bit 1  : haltIt
+  bit 2  : isPipBusy
+  bit 3  : haltedByBreak
+  bit 4  : stepIt
+Write address 0x00 -&gt;
+  bit 4  : stepIt
+  bit 16 : set resetIt
+  bit 17 : set haltIt
+  bit 24 : clear resetIt
+  bit 25 : clear haltIt and haltedByBreak
+
+Read Address 0x04 -&gt;
+  bits (31 downto 0) : Last value written into the register file
+Write Address 0x04 -&gt;
+  bits (31 downto 0) : Instruction that should be pushed into the CPU pipeline for debug purposes
+</pre></div>
+</div>
+<p>The OpenOCD port is there :
+<a class="reference external" href="https://github.com/SpinalHDL/openocd_riscv">https://github.com/SpinalHDL/openocd_riscv</a></p>
+</div>
+<div class="section" id="id39">
+<h3>YamlPlugin<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<p>This plugin offers a service to others plugins to generate a usefull Yaml file about the CPU configuration. It contains, for instance, the sequence of instruction required
+to flush the data cache (information used by openocd).</p>
+</div>
+</div>
+</div>
+
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to VexRiscv’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Penis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/default.js"></script>
+        <script type="text/javascript" src="../_static/wavedrom.min.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
