@@ -114,8 +114,8 @@ jobs:
         - provider: pages
           skip-cleanup: true
           github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-          keep-history: true
-          local-dir: build/html #because i cd in the doc folder
+          keep-history: false
+          local-dir: docs/build/html
           on:
             branch: master  # You can't be safe enough <insert double condom joke here>
 
